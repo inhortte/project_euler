@@ -25,8 +25,6 @@ countCoins amount coin | amount == 0             = 1
                        | coin < 0 && amount > 0  = 0
                        | otherwise               = (countCoins amount (coin - 1)) + (countCoins (amount - (coins !! coin)) coin)
 
-recursiveAns = countCoins 200 $ (length coins) - 1
-
 main = do
   args <- getArgs
   print $ countCoins ((read $ head args) :: Int) $ (length coins) - 1
