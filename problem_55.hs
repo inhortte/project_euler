@@ -37,7 +37,7 @@ isPalindrome n = strN == reverse strN
 isLychrel :: Integer -> Bool
 isLychrel n = isLychrel' 50 n
     where isLychrel' 0 _ = True
-          isLychrel' i x | isPalindrome $ palinAdd = False
+          isLychrel' i x | isPalindrome palinAdd = False
                          | otherwise = isLychrel' (i - 1) palinAdd
                          where palinAdd = x + (read (reverse $ show x) :: Integer)
 
